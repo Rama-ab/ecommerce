@@ -62,4 +62,4 @@ Ensure you have the following installed on your machine:
     ```bash
     php artisan serve
 9. Interact with the API and test the various endpoints via Postman collection 
-    Get the collection from here: 
+    Get the collection from here: (https://api.postman.com/collections/30331978-bda7f060-bb72-4f7f-9b49-e42dc79aeb91?access_key=PMAT-01JB9T8KNEMQWNTSQXJWDX2GGX)
