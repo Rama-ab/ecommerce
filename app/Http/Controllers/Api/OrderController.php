@@ -8,7 +8,7 @@ use App\Http\Resources\OrderResource;
 
 class OrderController extends Controller
 {
-
+//view all orders from a registered user
 public function index(){
    
         $user = auth()->user();
@@ -21,7 +21,7 @@ public function index(){
 
 
 
-
+//store an order
 public function store(Request $request){
 
     $request->validate([

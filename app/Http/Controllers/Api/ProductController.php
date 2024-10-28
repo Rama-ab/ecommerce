@@ -18,7 +18,7 @@ class ProductController extends Controller
         $products=Product::with('categories')->get();
         return response()->json(ProductResource::collection($products),200);
     }
-
+    //filter products by category
     public function filterCategory(Request $request){
         $query=Product::query();
         if ($request->filled('category')) {                       
@@ -42,6 +42,7 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      */
+    //show one object from product
     public function show(string $id)
     {
         $product=Product::findorfail($id);

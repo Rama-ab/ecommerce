@@ -20,6 +20,7 @@
              {{session('success')}}
       </div>
 @endif
+<!--to filtering orders by customer name  -->
       <form action="{{route('orders.index')}}" class="form-horizontal tasi-form">
         @csrf
   
@@ -37,7 +38,8 @@
       </div>  
     </div>
 
-    
+    <!--to filtering orders by order status  -->
+
     <div class="row">
       <div class="form-group col-md-6">
            <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">State</label>
@@ -58,6 +60,7 @@
     </button>
 </div> 
     </form>
+ <!--show the message when there no orders related to the customer -->
 
     @if($message)
     <div class="m-5">

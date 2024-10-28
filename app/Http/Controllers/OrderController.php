@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
+
+  //fetch all orders or fetch orders with filtering by customer or order status or both
   public function index(Request $request){
    
     $users =User::all();
@@ -32,7 +34,7 @@ class OrderController extends Controller
    }
 
 
-
+//show one order by id
    public function show($id){
     $order=Order::with(['product' ,'user'])->findorfail($id);
     return view('orders.show', compact('order'));
@@ -45,6 +47,8 @@ class OrderController extends Controller
     return redirect()->back();
   }
 
+
+  //change the status of the order by the admin
   public function updateStatus(Request $request , $id){
 
     $request->validate([
